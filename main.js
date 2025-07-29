@@ -9,24 +9,28 @@ let characters = [
 ];
 
 function randomTriplet(arr) {
-  const shuffled = arr.sort(() => 0.5 - Math.random());
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, 3);
 }
 
 function renderRound() {
   const triplet = randomTriplet(characters);
-  screen.innerHTML = \`
+  screen.innerHTML = `
     <h2>Choose: Fuck, Marry, Kill</h2>
-    <div>\${triplet.map(name => \`
-      <p><strong>\${name}</strong></p>
-      <select>
-        <option value="fuck">Fuck</option>
-        <option value="marry">Marry</option>
-        <option value="kill">Kill</option>
-      </select>
-    \`).join('')}</div>
+    ${triplet.map(name => `
+      <div class="character-block">
+        <p><strong>${name}</strong></p>
+        <select>
+          <option value="fuck">Fuck</option>
+          <option value="marry">Marry</option>
+          <option value="kill">Kill</option>
+        </select>
+      </div>
+    `).join('')}
     <button onclick="renderRound()">Next Round</button>
-  \`;
+  `;
 }
 
-renderRound();
+function startGame() {
+  renderRound();
+}
