@@ -1,27 +1,49 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #121212;
   color: #f0f0f0;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  margin: 0;
 }
 
 #app {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 24px;
+  margin: 20px 10px 0;
   font-size: 16px;
   border: none;
   border-radius: 8px;
-  background-color: #6200ea;
-  color: white;
+  background-color: #03dac5;
+  color: #000;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #3700b3;
+  background-color: #018786;
+}
+
+select {
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.character-block {
+  margin-bottom: 20px;
 }
